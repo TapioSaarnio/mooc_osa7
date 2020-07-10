@@ -52,7 +52,7 @@ const useResource = (baseUrl) => {
     axios.post(baseUrl, resource).then( res => {
       console.log(resources.concat(resource))
       setResources(resources.concat(resource))
-      window.location.reload()
+      window.location.reload() //jotta id tulee tietokannasta ja konsoliin ei herjauksia
 
     }
 
@@ -81,9 +81,9 @@ const App = () => {
 
     personService.get()
     noteService.get()
+    console.log('effex')
     
-    
-  }, [])
+  }, []) //eslint-disable-line react-hooks/exhaustive-deps
   
 
   const handleNoteSubmit = (event) => {
@@ -96,8 +96,7 @@ const App = () => {
     personService.create({ name: name.value, number: number.value})
     
   }
-  console.log(notes)
-  console.log(persons)
+ 
 
   return (
     <div>

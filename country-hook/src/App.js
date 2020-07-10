@@ -21,27 +21,26 @@ const useCountry = (name) => {
   
   useEffect(() => {
     const url = `https://restcountries.eu/rest/v2/name/${name}`
-    console.log(url)
-    const countryData = {}
+    const countryData = {
+    }
     if (!(name ==='' || name === null || name ===undefined))
     axios.get(url).then(res => {
        countryData.data = res.data[0]
        countryData.found = true
       setCountry(countryData)
+      }).catch(error => { setCountry(null); console.log(error.response.data)})
       
-    })
-    console.log(country)
+
   }, [name])
 
   return country
 }
 
 const Country = ({ country }) => {
-  if (!country) {
-    return null
-  }
+ 
 
-  if (!country.found) {
+
+  if (country === null) {
     return (
       <div>
         not found...

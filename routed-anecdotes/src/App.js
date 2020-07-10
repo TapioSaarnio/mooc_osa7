@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+//import ReactDOM from 'react-dom'
 import useField from './hooks'
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  Redirect,
   useRouteMatch,
   useHistory,
 } from "react-router-dom"
@@ -28,7 +26,6 @@ const Menu = ({anecdotes, setNotification, addNew}) => {
                  ? anecdotes.find(anecdote => Number(anecdote.id) === Number(match.params.id))
                 : null
 
-  console.log(anecdote)
   return (
     <div>
     <div>
@@ -89,7 +86,6 @@ const Footer = () => (
 
 const Anecdote = ({ anecdote }) => { 
 
-  console.log('moi')
 
   return (
   <div>
@@ -113,13 +109,11 @@ const CreateNew = (props) => {
 
   const handleReset = (e) => {
     e.preventDefault()
-    console.log('handlereset')
     
     content.reset()
     author.reset()
     info.reset()
 
-    console.log(content.value)
   }
   
   const handleSubmit = (e) => {
@@ -211,9 +205,12 @@ const App = () => {
     
   }
 
+  /*
   const anecdoteById = (id) =>
     anecdotes.find(a => a.id === id)
+    */
 
+  /*
   const vote = (id) => {
     const anecdote = anecdoteById(id)
 
@@ -224,7 +221,8 @@ const App = () => {
 
     setAnecdotes(anecdotes.map(a => a.id === id ? voted : a))
   }
-  console.log(anecdotes)
+  */
+
 
   return (
     <div>
