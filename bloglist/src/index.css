@@ -1,0 +1,90 @@
+.notification {
+    color: blue;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    padding :10px;
+    margin-bottom: 10px;
+    visibility: visible;
+  }
+
+#createNew {
+
+  margin-top: 10px;
+
+}
+
+#loggedinP {
+  color: white;
+}
+
+#blogscreated {
+
+  margin-left: 100px;
+}
+
+.blogslength {
+  margin-left: 35px;
+}
+
+.navli {
+  float: left;
+}
+
+body {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 100px; 
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#loginForm {
+  float: right;
+  margin-right: 20px;
+}
+
+li a:hover {
+  background-color: #000FFF;
+  color: white;
+}
+
+#usernameSpan{
+  color: white;
+  margin-right: 5px;
+}
+
+#passwordSpan{
+  color: white;
+  margin-right: 5px;
+}
+
+#loggedin {
+  float: right;
+  margin-right: 20px
+}
+
+
+#login {
+  
+  float: right;
+}
+
+#navbar {
+  list-style-type: none;
+  border: 1px solid;
+  background-color: #202020;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  
+}
